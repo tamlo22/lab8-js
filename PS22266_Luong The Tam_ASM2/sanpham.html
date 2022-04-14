@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS22266-Sản phẩm</title>
+    <link rel="stylesheet" href="css/sanpham.css">
+    <link rel="stylesheet" href="index.html">
+    <script>
+
+        var dh = null;
+        function tg() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+        }
+
+
+        dh = setInterval("tg()", 1000);
+        function stop() {
+
+            clearInterval(dh);
+            dh = null;
+        }
+        function start() {
+            if (dh == null) {
+                dh = setInterval("tg()", 1000);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box1 ">
+                <div class="container_1">
+                    
+                    <div class="notification"> <a href="#"> <img src="images/icons8-notification-48.png" alt=""> Thông
+                            báo</a> </div>
+                    <div class="support"> <a href="#"> <img src="images/icons8-online-support-30.png" alt=""> Hỗ trợ</a>
+                    </div>
+                    <div class="registration"> <a href="#">Đăng ký</a></div>
+                    <div class="login"><a href="taikhoan.html"> <img src="images/icons8-male-user-24 (1).png" alt="">|
+                            Đăng nhập</a>
+                    </div>
+                    <div class="logo"> <a href="index.html"> <img src="images/Logo.png" alt="images/logo"></a></div>
+                    
+                    <div class="look"><input type="text" placeholder=" Tìm kiếm ..."></div>
+                    <div class="search"><a href="#"><img src="images/icons8-search-48 (1).png" alt=""></a></div>
+                    <div class="cart"><a href="#"><img src="images/icons8-shopping-cart-96 (1).png" alt=""></a></div>
+                    <div class="product"><a href="# ">Áo</a></div>
+                    <div class="product1"><a href="# ">Quần</a></div>
+                    <div class="product2"><a href="# ">Phụ kiện</a></div>
+                    <div class="product3"><a href="# ">Nón</a></div>
+                    <div class="product4"><a href="# ">Váy</a></div>
+                    <div class="product5"><a href="# ">Giày</a></div>
+                    <span id="dongho"></span>
+                    <div class="dongho"> <img src="images/icons8-clock-24.png" alt=""></div>
+                </div>
+            </div>
+            <div class="container_1">
+                <div class="hmenu ">
+                    <ul>
+                        <li> <a href="index.html">Trang chủ</a></li>
+                        <li> <a href="#">Giới thiệu </a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a>
+                            <ul>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Váy</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Nón</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li> <a href="lienhe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        </nav>
+        <article>
+            <div class="article1">
+                <div class="container_12 ml10 mr10">
+                    <div class="linklk">
+                        <a href="index.html">Trang chủ </a>> Sản phẩm
+
+                    </div>
+                    <div class="khungdanhmuc grid_4 ">
+                        <div class="danhmuc">
+                            <h2>Danh mục</h2>
+                            <ul>
+
+                                <li> <a href="#">Set quần áo</a></li>
+                                <li> <a href="#">Quần </a>
+                                    <ul>
+                                        <li><a href="#">Quần Jean</a></li>
+                                        <li><a href="#">Quần Jogger</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Áo</a>
+                                    <ul>
+                                        <li><a href="#">Áo thun</a></li>
+                                        <li><a href="#">Áo khoác</a></li>
+                                        <li><a href="#">Áo sơ mi</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Váy</a></li>
+                                <li> <a href="#">Giày</a>
+                                    <ul>
+                                        <li><a href="#">Giày thể thao</a></li>
+                                        <li><a href="#">Giày cao gót</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="#">Nón</a></li>
+                            </ul>
+                        </div>
+                        <div class="mucgia">
+                            <h2>Mức giá</h2>
+                            <div class="thanhkeo">
+                                <label><input name="size" ></label>
+                            </div>
+                            <div class="locgia">
+
+                                <button type="submit">Lọc giá</button>
+                            </div>
+                            
+                            <div class="kichthuoc">
+                                <label>
+                                    <h2>Kích thước</h2>
+                                </label>
+                                <div class="form-group">
+                                    <label><a href="#"><input name="size" type="radio"> XL</a></label>
+                                </div>
+                                <div class="form-group">
+                                    <label><a href=""><input name="size" type="radio"> L</a></label>
+                                </div>
+                                <div class="form-group">
+                                    <label><a href="#"><input name="size" type="radio"> M</a></label>
+                                </div>
+                                <div class="form-group">
+                                    <label><a href="#"><input name="size" type="radio"> S</a></label>
+                                </div>
+                            </div>
+                            <div class="thetags">
+                                <h2>Thẻ tags</h2>
+                                <p>
+                                    Hiện chưa có tag nào
+                                </p>
+                            </div>
+                            <div class="sanphamnoibat">
+                                <img src="images/taikhoanbg.JPG" alt="">
+                                <a href="#">SẢN PHẨM NỔI BẬT</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="khungsanpham grid_8 ">
+                        <div class="hopnho1 grid_2 mb50">
+                            <div class="sanpham1 grid_2">
+                                <a href="sanphamchitiet.html"><img src="images/1.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="sanphamchitiet.html">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 1</a>
+                                    <br>
+                                </div>
+                                230.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2  ">
+                                <a href="#"><img src="images/sp1.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 2</a>
+                                    <br>
+                                </div>
+                                260.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/sp2.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 3</a>
+                                    <br>
+                                </div>
+                                250.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/sp3.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 4</a>
+                                    <br>
+                                </div>
+                                220.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 mb50">
+                            <div class="sanpham1 grid_2">
+                                <a href="#"><img src="images/7.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 5</a>
+                                    <br>
+                                </div>
+                                180.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2  ">
+                                <a href="#"><img src="images/6.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 6</a>
+                                    <br>
+                                </div>
+                                170.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/9.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 7</a>
+                                    <br>
+                                </div>
+                                360.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/10.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 8</a>
+                                    <br>
+                                </div>
+                                230.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/11.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 9</a>
+                                    <br>
+                                </div>
+                                270.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/16.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 10</a>
+                                    <br>
+                                </div>
+                                270.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/4.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 11</a>
+                                    <br>
+                                </div>
+                                290.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/3.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 12</a>
+                                    <br>
+                                </div>
+                                200.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2  mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/2.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 13</a>
+                                    <br>
+                                </div>
+                                310.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/7.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 14</a>
+                                    <br>
+                                </div>
+                                180.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/9.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 15</a>
+                                    <br>
+                                </div>
+                                240.000₫
+                            </div>
+                        </div>
+                        <div class="hopnho1 grid_2 ml20 mb50">
+                            <div class="sanpham1 grid_2 ">
+                                <a href="#"><img src="images/15.jpg" alt=""></a>
+                                <div class="muangay1">
+                                    <a href="#">MUA NGAY</a>
+                                </div>
+                            </div>
+                            <div class="gia1 grid_2">
+                                <div class="ten">
+                                    <a href="#">Sản phẩm 16</a>
+                                    <br>
+                                </div>
+                                260.000₫
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="trangkhac">
+                        <a href="sanpham.html">1</a>
+                        <a href="sanpham.html">2</a>
+                        <a href="sanpham.html">3</a>
+                        <a href="sanpham.html">4</a>
+                        <a href="sanpham.html">5</a>
+                        <a href="sanpham.html">6</a>
+                        <a href="sanpham.html">7</a>
+                        <a href="sanpham.html">..</a>
+                    </div>
+                </div>
+
+            </div>
+        </article>
+        <footer>
+            <div class="footer ">
+                <div class="copyright1 ml10 mr20 pt20">
+                    SHOP THỜI TRANG PS22266<br>
+                    <br>
+                    Địa chỉ: Công Viên phần mềm quang trung, Q.12, TP.HCM<br>
+                    Email:tamltps22266@gmail.com<br>
+                    Mã số kinh doanh: 00329998874<br>
+
+                </div>
+
+                <div class="copyright1 mr20 pt20 ">
+                    CHÍNH SÁCH<br>
+                    <br>
+                    Chính sách đổi hàng<br>
+                    Chính sách bảo hành<br>
+                    Chính sách bảo mật<br>
+                    Chính sách hoàn tiền<br>
+
+                </div>
+                <div class="copyright1 mr20 pt20">
+                    Thông tin<br>
+                    <br>
+                    Giới thiệu<br>
+                    Liên hệ công ty<br>
+                    Đối tác<br>
+                    Tuyển dụng<br>
+                </div>
+                <div class="copyright1 pt20">
+                    FAQ<br>
+                    <br>
+                    Thanh toán<br>
+                    Hướng dẫn chọn size<br>
+                    Kiểm tra thông tin đơn hàng<br>
+                    Câu hỏi thường gặp<br>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

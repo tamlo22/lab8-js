@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS22266-Giới thiệu</title>
+    <link rel="stylesheet" href="css/gioithieu.css">
+    <script>
+
+        var dh = null;
+        function tg() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+        }
+
+
+        dh = setInterval("tg()", 1000);
+        function stop() {
+
+            clearInterval(dh);
+            dh = null;
+        }
+        function start() {
+            if (dh == null) {
+                dh = setInterval("tg()", 1000);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box1 ">
+                <div class="container_1">
+                    
+                    <div class="notification"> <a href="#"> <img src="images/icons8-notification-48.png" alt=""> Thông
+                            báo</a> </div>
+                    <div class="support"> <a href="#"> <img src="images/icons8-online-support-30.png" alt=""> Hỗ trợ</a>
+                    </div>
+                    <div class="registration"> <a href="#">Đăng ký</a></div>
+                    <div class="login"><a href="taikhoan.html"> <img src="images/icons8-male-user-24 (1).png" alt="">|
+                            Đăng nhập</a>
+                    </div>
+                    <div class="logo"> <a href="index.html"> <img src="images/Logo.png" alt=""></a></div>
+                    
+                    <div class="look"><input type="text" placeholder=" Tìm kiếm ..."></div>
+                    <div class="search"><a href="#"><img src="images/icons8-search-48 (1).png" alt=""></a></div>
+                    <div class="cart"><a href="giohang.html"><img src="images/icons8-shopping-cart-96 (1).png"
+                                alt=""></a></div>
+                    <div class="product"><a href="# ">Áo</a></div>
+                    <div class="product1"><a href="# ">Quần</a></div>
+                    <div class="product2"><a href="# ">Phụ kiện</a></div>
+                    <div class="product3"><a href="# ">Nón</a></div>
+                    <div class="product4"><a href="# ">Váy</a></div>
+                    <div class="product5"><a href="# ">Giày</a></div>
+                    <span id="dongho"></span>
+                    <div class="dongho"> <img src="images/icons8-clock-24.png" alt=""></div>
+                </div>
+            </div>
+            <div class="container_1">
+                <div class="hmenu ">
+                    <ul>
+                        <li> <a href="index.html">Trang chủ</a></li>
+                        <li> <a href="#">Giới thiệu </a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a>
+                            <ul>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Váy</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Nón</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li> <a href="lienhe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container_12 ">
+            <div class="linklk "><a href="index.html">Trang chủ </a>> Giới thiệu</div>
+            <div class="gioithieu"> <a href="#">GIỚI THIỆU VỀ KOOCHAN18</a></div>
+            <p>
+                "tamlo hiểu rằng, thời trang không phải chỉ là mặc một chiếc áo đẹp mà là mặc một chiếc áo thật sự
+                phù hợp với mình."
+                Góp mặt trên thị trường thời trang Việt Nam từ năm 2009, với 10 năm không ngừng phát triển, đổi mới và
+                tạo dấu ấn tốt.
+                <br>
+                <br>
+                Với điểm mạnh về sự đa dạng mẫu mã, chất lượng trong từng sản phẩm và luôn cập nhật những xu hướng mới
+                nhất.
+            </p>
+            <div class="poster"><img src="images/poster1.jpg" alt=""></div>
+            <p>Tamlo luôn đặt câu hỏi " khách hàng cần gì và có được gì khi đến với Tamlo?" 
+                <br>
+            
+            </p>
+
+
+
+        </div>
+        <footer>
+            <div class="footer ">
+                <div class="copyright1 ml10 mr20 pt20">
+                    SHOP THỜI TRANG PS22266<br>
+                    <br>
+                    Địa chỉ: Công Viên phần mềm quang trung, Q.12, TP.HCM<br>
+                    Email:tamltps22266@gmail.com<br>
+                    Mã số kinh doanh: 00329998874<br>
+
+                </div>
+
+                <div class="copyright1 mr20 pt20 ">
+                    CHÍNH SÁCH<br>
+                    <br>
+                    Chính sách đổi hàng<br>
+                    Chính sách bảo hành<br>
+                    Chính sách bảo mật<br>
+                    Chính sách hoàn tiền<br>
+
+                </div>
+                <div class="copyright1 mr20 pt20">
+                    Thông tin<br>
+                    <br>
+                    Giới thiệu<br>
+                    Liên hệ công ty<br>
+                    Đối tác<br>
+                    Tuyển dụng<br>
+                </div>
+                <div class="copyright1 pt20">
+                    FAQ<br>
+                    <br>
+                    Thanh toán<br>
+                    Hướng dẫn chọn size<br>
+                    Kiểm tra thông tin đơn hàng<br>
+                    Câu hỏi thường gặp<br>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

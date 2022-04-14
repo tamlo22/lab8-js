@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOOCHAN18 | Tài khoản</title>
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="index.html">
+    <script>
+
+        var dh = null;
+        function tg() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+        }
+
+
+        dh = setInterval("tg()", 1000);
+        function stop() {
+
+            clearInterval(dh);
+            dh = null;
+        }
+        function start() {
+            if (dh == null) {
+                dh = setInterval("tg()", 1000);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box1 ">
+                <div class="container_1">
+                   
+                    <div class="notification"> <a href="#"> <img src="images/icons8-notification-48.png" alt=""> Thông
+                            báo</a> </div>
+                    <div class="support"> <a href="#"> <img src="images/icons8-online-support-30.png" alt=""> Hỗ trợ</a>
+                    </div>
+                    <div class="registration"> <a href="dangki.html">Đăng ký</a></div>
+                   
+                    </div>
+                    <div class="logo"> <a href="index.html"> <img src="images/Logo.jpg" alt=""></a></div>
+                    
+                    <div class="look"><input type="text" placeholder=" Tìm kiếm ..."></div>
+                    <div class="search"><a href="#"><img src="images/icons8-search-48 (1).png" alt=""></a></div>
+                    <div class="cart"><a href="#"><img src="images/icons8-shopping-cart-96 (1).png" alt=""></a></div>
+                    
+                    <span id="dongho"></span>
+                    <div class="dongho"> <img src="images/icons8-clock-24.png" alt=""></div>
+                </div>
+            </div>
+            <div class="container_1">
+                <div class="hmenu ">
+                    <ul>
+                        <li> <a href="index.html">Trang chủ</a></li>
+                        <li> <a href="#">Giới thiệu </a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a>
+                            <ul>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Váy</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Nón</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li> <a href="lienhe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    
+        <article>
+            <div class="container_12">
+                <div class="linklk"> <a href="index.html">Trang chủ </a>> Tài khoản</div>
+                <div class="taikhoan1 grid_6 mr40">
+
+                    <h2>ĐĂNG NHẬP</h2>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" class="form-control1" placeholder="Nhập Email hoặc số điện thoại">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control1" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <button class="button" type="submit">Đăng nhập</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+        <footer>
+            <div class="footer ">
+                <div class="copyright1 ml10 mr20 pt20">
+                    SHOP THỜI TRANG PS22266<br>
+                    <br>
+                    Địa chỉ: Công Viên phần mềm quang trung, Q.12, TP.HCM<br>
+                    Email:tamltps22266@gmail.com<br>
+                    Mã số kinh doanh: 00329998874<br>
+
+                </div>
+
+                <div class="copyright1 mr20 pt20 ">
+                    CHÍNH SÁCH<br>
+                    <br>
+                    Chính sách đổi hàng<br>
+                    Chính sách bảo hành<br>
+                    Chính sách bảo mật<br>
+                    Chính sách hoàn tiền<br>
+
+                </div>
+                <div class="copyright1 mr20 pt20">
+                    Thông tin<br>
+                    <br>
+                    Giới thiệu<br>
+                    Liên hệ công ty<br>
+                    Đối tác<br>
+                    Tuyển dụng<br>
+                </div>
+                <div class="copyright1 pt20">
+                    FAQ<br>
+                    <br>
+                    Thanh toán<br>
+                    Hướng dẫn chọn size<br>
+                    Kiểm tra thông tin đơn hàng<br>
+                    Câu hỏi thường gặp<br>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

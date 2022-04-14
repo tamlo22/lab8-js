@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS22266-Giỏ hàng</title>
+    <link rel="stylesheet" href="css/giohang.css">
+    <script type="text/javascript" src="GioHang.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            float: left;
+
+            width: 700px;
+            margin-top: 77px;
+        }
+
+        .monHang {
+            width: 230px;
+            position: relative;
+            height: 270px;
+            float: left;
+            margin-bottom: 130px;
+
+        }
+
+        .monHang>#hinh {
+
+            margin-bottom: 20px;
+
+        }
+
+        .muaHang {
+            height: 38px;
+            position: absolute;
+            top: 290px;
+            border: 1px solid #028281;
+            width: 200px;
+            font-weight: bold;
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        .gia {
+            position: absolute;
+            float: left;
+            top: 8px;
+            left: 12px;
+        }
+
+        .themHang {
+            float: right;
+        }
+
+        .themHang button {
+            width: 80px;
+            height: 35px;
+        }
+
+        .name {
+            position: absolute;
+            top: 255px;
+            left: 70px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2em;
+        }
+
+        .nutMua {
+
+            background-color: #028281;
+            color: aliceblue;
+            font-weight: bold;
+            border: none;
+        }
+
+        .nutMua:hover {
+            background-color: rgb(219, 21, 21);
+            color: white;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            margin-top: 70px;
+            margin-bottom: 40px;
+            width: 500px;
+            color: #028281;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            color: #028281;
+        }
+
+        .container2 {
+            margin-top: 30px;
+            float: right;
+            width: 475px;
+
+        }
+
+        td {
+            padding-right: 20px;
+        }
+
+        .Xoa {
+            background-color: #028281;
+            color: aliceblue;
+            padding: 5px 10px 5px 10px;
+            border: none;
+            margin-left: 20px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .gioHangMua {
+            margin-top: 20px;
+            height: 550px;
+            overflow-y: scroll;
+            border: 1px solid #028281;
+        }
+
+        .container2>h3 {
+            float: right;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #028281;
+        }
+
+        .container2 h1>img {
+
+            position: absolute;
+            bottom: 105px;
+            padding-left: 15px;
+        }
+
+        input:hover {
+            background-color: darkseagreen;
+        }
+
+        .soLuong {
+
+            width: 40px;
+            height: 20px;
+            position: relative;
+        }
+
+        .Tang {
+            border: 1px solid black;
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            top: -10px;
+            left: 35px;
+            text-align: center;
+            padding-top: -10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 1px;
+
+        }
+
+        .Giam {
+
+            padding-bottom: 18px;
+            width: 30px;
+            height: 18px;
+            font-size: 10px;
+            position: absolute;
+            top: 13px;
+            left: 35px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1em;
+            border-radius: 1px;
+
+        }
+
+        .HienSo {
+            position: absolute;
+            top: 0px;
+            left: 7px;
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .nutThem {
+            z-index: -1;
+        }
+    </style>
+     <script>
+
+        var dh = null;
+        function tg() {
+            var now = new Date();
+            var h = now.getHours();
+            var m = now.getMinutes();
+            var s = now.getSeconds();
+            document.getElementById("dongho").innerHTML = h + ":" + m + ":" + s;
+
+        }
+
+
+        dh = setInterval("tg()", 1000);
+        function stop() {
+
+            clearInterval(dh);
+            dh = null;
+        }
+        function start() {
+            if (dh == null) {
+                dh = setInterval("tg()", 1000);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="box1 ">
+                <div class="container_1">
+                    
+                    <div class="notification"> <a href="#"> <img src="images/icons8-notification-48.png" alt=""> Thông
+                            báo</a> </div>
+                    <div class="support"> <a href="#"> <img src="images/icons8-online-support-30.png" alt=""> Hỗ trợ</a>
+                    </div>
+                    <div class="registration"> <a href="#">Đăng ký</a></div>
+                    <div class="login"><a href=""> <img src="images/icons8-male-user-24 (1).png" alt="">| Đăng nhập</a>
+                    </div>
+                    <div class="logo"> <a href="index.html"> <img src="images/Logo.png" alt=""></a></div>
+                    
+                    <div class="look"><input type="text" placeholder=" Tìm kiếm ..."></div>
+                    <div class="search"><a href="#"><img src="images/icons8-search-48 (1).png" alt=""></a></div>
+                    <div class="cart"><a href="#"><img src="images/icons8-shopping-cart-96 (1).png" alt=""></a></div>
+                    <div class="product"><a href="# ">Áo</a></div>
+                    <div class="product1"><a href="# ">Quần</a></div>
+                    <div class="product2"><a href="# ">Phụ kiện</a></div>
+                    <div class="product3"><a href="# ">Nón</a></div>
+                    <div class="product4"><a href="# ">Váy</a></div>
+                    <div class="product5"><a href="# ">Giày</a></div>
+                    <span id="dongho"></span>
+                    <div class="dongho"> <img src="images/icons8-clock-24.png" alt=""></div>
+                </div>
+            </div>
+            <div class="container_1">
+                <div class="hmenu ">
+                    <ul>
+                        <li> <a href="index.html">Trang chủ</a></li>
+                        <li> <a href="#">Giới thiệu </a></li>
+                        <li><a href="sanpham.html">Sản phẩm</a>
+                            <ul>
+                                <li><a href="#">Áo</a></li>
+                                <li><a href="#">Quần</a></li>
+                                <li><a href="#">Phụ kiện</a></li>
+                                <li><a href="#">Váy</a></li>
+                                <li><a href="#">Giày</a></li>
+                                <li><a href="#">Nón</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li> <a href="lienhe.html">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container_12 ">
+            <div class="wrapper ">
+                <div class="monHang">
+                    <img id="hinh" src="images/1.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 1</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">320.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/1.jpg','Sản phẩm 1',320.000,'A')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/sp2.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 2</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">300.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/sp2.jpg','Sản phẩm 2',300.000,'B')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/3.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 3</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">280.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/3.jpg','Sản phẩm 3',280.000,'C')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/4.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 4</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">370.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/4.jpg','Sản phẩm 4',370.000,'D')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/sp3.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 5</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">340.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/sp3.jpg','Sản phẩm 5',370.000,'E')">
+                                Mua</button></div>
+                    </div>
+                </div>
+                <div class="monHang">
+                    <img id="hinh" src="images/6.jpg" width="200" height="250">
+                    <p class="name">Sản phẩm 6</p>
+                    <div class="muaHang">
+                        <div class="gia"> <span class="soTien">310.000₫</span></div>
+                        <div class="themHang"> <button class="nutMua"
+                                onclick="themMatHang('images/6.jpg','Sản phẩm 6',370.000,'F')">
+                                Mua</button></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container2 ">
+                <h1>Giỏ hàng <img src="images/shopping-cart-60.png " alt=""></h1>
+                <div class="gioHangMua" id="gioMuaHang">
+                    <!-- Mặt hàng sẽ được thêm vào đây -->
+                </div>
+                <h3 id="tongTien">Tổng tiền : 0</h3>
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer ">
+                <div class="copyright1 ml10 mr20 pt20">
+                    SHOP THỜI TRANG PS22266<br>
+                    <br>
+                    Địa chỉ: Công Viên phần mềm quang trung, Q.12, TP.HCM<br>
+                    Email:tamltps22266@gmail.com<br>
+                    Mã số kinh doanh: 00329998874<br>
+
+                </div>
+
+                <div class="copyright1 mr20 pt20 ">
+                    CHÍNH SÁCH<br>
+                    <br>
+                    Chính sách đổi hàng<br>
+                    Chính sách bảo hành<br>
+                    Chính sách bảo mật<br>
+                    Chính sách hoàn tiền<br>
+
+                </div>
+                <div class="copyright1 mr20 pt20">
+                    Thông tin<br>
+                    <br>
+                    Giới thiệu<br>
+                    Liên hệ công ty<br>
+                    Đối tác<br>
+                    Tuyển dụng<br>
+                </div>
+                <div class="copyright1 pt20">
+                    FAQ<br>
+                    <br>
+                    Thanh toán<br>
+                    Hướng dẫn chọn size<br>
+                    Kiểm tra thông tin đơn hàng<br>
+                    Câu hỏi thường gặp<br>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
